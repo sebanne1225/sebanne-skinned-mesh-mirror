@@ -32,3 +32,6 @@ Recordings/
 
 .DS_Store
 Thumbs.db
+
+# Unity-generated top-level metadata for local package usage
+/*.meta

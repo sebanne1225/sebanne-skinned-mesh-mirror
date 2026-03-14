@@ -1,9 +1,9 @@
 {
-  "name": "com.sebanne.tool-template",
-  "displayName": "Sebanne Tool Template",
+  "name": "com.sebanne.skinned-mesh-mirror",
+  "displayName": "Skinned Mesh Mirror",
   "version": "0.1.0",
   "unity": "2022.3",
-  "description": "VRChat向けUnity Editorツールのテンプレートです。",
+  "description": "VRChat向けの衣装・小物用 Skinned Mesh ミラー生成ツールです。",
   "author": {
     "name": "sebanne"
   }

@@ -1,64 +1,50 @@
-# Sebanne Tool Template
-
-この repository は完成済みツールではなく、VRChat 向け Unity Editor ツールを作り始めるためのテンプレ repo です。複製後に命名や実装を置き換え、各ツール専用の package として育てる前提で用意しています。
+# Sebanne Skinned Mesh Mirror
 
 ## 概要
 
-`Sebanne Tool Template` は、VRChat 向け Unity Editor ツールを UPM 形式で整理して開発するためのテンプレートです。Runtime と Editor の責務を分離し、配布・再利用しやすい最小構成を用意しています。
+`Sebanne Skinned Mesh Mirror` は、VRChat 向けの衣装・小物用 Skinned Mesh ミラー生成ツールです。source side として片側のメッシュを選ぶと、反対側の片側メッシュを生成することを目的にしています。
+
+現在の package 版では、MVP 範囲の main window、Dry Run、本生成が通る状態まで整理されています。対象は Leg / Foot 周辺を中心にした実装です。
+Package Manager 上の displayName は `Skinned Mesh Mirror` です。
 
 ## 何ができるか
 
-- Unity Package としてツールを整理できます
-- `Editor` と `Runtime` を分離して保守しやすくできます
-- ドキュメント、サンプル、開発メモを同じ repo で管理できます
-- Dry Run や診断を先に考慮したツール設計の土台にできます
+- source side にした片側メッシュから、反対側の片側メッシュ生成を行うための土台を提供します
+- Dry Run で実処理の前に診断だけ先に確認できます
+- package 版の main window から本生成まで実行できます
+- Runtime / Editor を分離した UPM package 構成で管理できます
+- 診断結果とログを見ながら、失敗時の原因確認をしやすい形に整備していきます
 
-## 導入方法
+## 現在対応していること
 
-1. このテンプレートを複製して新しい repo を作成します。
-2. `package.json` の package 名、表示名、説明をツール名に合わせて変更します。
-3. asmdef 名、名前空間、README、ドキュメントをツール内容に合わせて置き換えます。
-4. Unity プロジェクトの Package Manager からローカルパッケージまたは Git URL として読み込みます。
-
-## 関連ファイル
-
-- パッケージ定義: [`package.json`](./package.json)
-- ライセンス: [`LICENSE`](./LICENSE)
-- Runtime asmdef: [`Runtime/Sebanne.ToolTemplate.asmdef`](./Runtime/Sebanne.ToolTemplate.asmdef)
-- Editor asmdef: [`Editor/Sebanne.ToolTemplate.Editor.asmdef`](./Editor/Sebanne.ToolTemplate.Editor.asmdef)
-- テンプレ確認ウィンドウ: [`Editor/ToolTemplateCheckWindow.cs`](./Editor/ToolTemplateCheckWindow.cs)
+- 現在の package には、`Skinned Mesh Mirror` 用の命名、asmdef、main window、確認ウィンドウが含まれます
+- package 内の受け皿は Editor 主体で、`Editor/Core`、`Editor/UI`、`Editor/Diagnostics`、`Editor/Utility` へ段階的に移植する前提です
+- 現在 package 化できた範囲は `Editor/Core/SkinnedMeshMirrorTypes.cs`、`Editor/Core/SkinnedMeshMirrorLocalMap.cs`、`Editor/Core/SkinnedMeshMirrorBuilder.cs`、`Editor/UI/SkinnedMeshMirrorWindow.cs` です
+- MVP の対象は Leg / Foot 中心です
+- BlendShape は補正未対応で、現時点ではそのまま保持する前提です
+- Runtime は現時点では実質不要と判断しており、共通モデルが必要になるまで予約領域として扱います
 
 ## 使い方
 
-1. `Runtime/` に実行時に必要な型や共通ロジックを配置します。
-2. `Editor/` にメニュー、ウィンドウ、検証、変換処理などの Editor 拡張を配置します。
-3. `Documentation~/` に公開向けドキュメントや設計メモを追加します。
-4. `Samples~/Example/` に最小の使用例を置きます。
-
-## 動作確認
-
-1. Unity プロジェクトの Package Manager から、この repo をローカルパッケージとして読み込みます。
-2. Unity 上部メニューの `Tools/Sebanne Tool Template/Template Check Window` を開きます。
-3. ウィンドウ内の `確認ログを出す` ボタンを押し、Console に 1 行ログが出ることを確認します。
-
-## 新しいツールを作るときの置換ポイント
-
-- `ToolTemplate`
-- `com.sebanne.tool-template`
-- `Sebanne Tool Template`
+1. Unity Project の Package Manager から、この repo をローカル package として読み込みます。
+2. Unity 上部メニューの `Tools/Sebanne/Skinned Mesh Mirror/Window` を開きます。
+3. `確認だけ` を有効にしたまま Dry Run を先に試し、診断結果と Console ログを確認します。
+4. 必要に応じて `Tools/Sebanne/Skinned Mesh Mirror/Check Window` を開き、package 名と導線を確認します。
 
 ## Dry Run / 診断
 
-- 破壊的な処理を実装する前に Dry Run モードを用意し、対象件数や変更予定内容を先に確認できるようにします。
-- 実処理と診断処理のログ形式をそろえ、利用者が差分を追いやすいようにします。
-- 問題発生時は、対象、理由、回避策がログや UI から分かるようにします。
+- Dry Run では、生成処理を確定する前に診断だけを先に確認できる想定です
+- 問題が起きた場合は、まず診断結果と Unity Console のログを見る運用を前提にしています
+- 対象メッシュ、推定される問題箇所、処理可否の判断が追いやすいログ設計を今後の本体移植で整備します
 
 ## 制限事項
 
-- このテンプレート自体には具体的な機能実装は含まれていません。
-- VRChat SDK 依存コード、外部パッケージ依存、各種メニュー実装は未追加です。
-- 実運用前に Unity バージョン、依存関係、命名規則、ログ方針をプロジェクトに合わせて調整してください。
+- package 版は MVP 範囲の実行まで通っていますが、高度な整理や追加機能はまだこれからです
+- 現在の移植計画は Editor コード中心で、Runtime にはまだ実質的な移植対象を置いていません
+- MVP は Leg / Foot 周辺を主対象としており、全身の汎用ミラーにはまだ対応していません
+- BlendShape は補正未対応で、そのまま保持される前提です
+- 失敗時は診断結果とログの確認が前提で、自動復旧や詳細な補助 UI は未整備です
 
 ## ライセンス
 
-このテンプレートは MIT License で提供します。詳細は `LICENSE` を参照してください。
+MIT License です。詳細は `LICENSE` を参照してください。

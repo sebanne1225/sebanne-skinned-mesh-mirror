@@ -1,11 +1,7 @@
 {
-  "name": "Sebanne.ToolTemplate.Editor",
-  "references": [
-    "Sebanne.ToolTemplate"
-  ],
-  "includePlatforms": [
-    "Editor"
-  ],
+  "name": "Sebanne.SkinnedMeshMirror",
+  "references": [],
+  "includePlatforms": [],
   "excludePlatforms": [],
   "allowUnsafeCode": false,
   "overrideReferences": false,
