@@ -1,0 +1,54 @@
+name: Build Release Asset
+
+on:
+  release:
+    types:
+      - published
+
+jobs:
+  build-release-asset:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Get Version
+        id: version
+        uses: zoexx/github-action-json-file-properties@b9f36ce6ee6fe2680cd3c32b2c62e22eade7e590
+        with:
+          file_path: package.json
+          prop_path: version
+
+      - name: Set Asset Name
+        run: |
+          echo "zipFile=com.sebanne.skinned-mesh-mirror-${{ steps.version.outputs.value }}.zip" >> $GITHUB_ENV
+
+      - name: Validate Tag Version
+        run: |
+          if [ "${{ github.event.release.tag_name }}" != "${{ steps.version.outputs.value }}" ]; then
+            echo "Release tag and package.json version do not match."
+            echo "tag=${{ github.event.release.tag_name }}"
+            echo "version=${{ steps.version.outputs.value }}"
+            exit 1
+          fi
+
+      - name: Create Package Zip
+        run: |
+          zip -r "${{ github.workspace }}/${{ env.zipFile }}" \
+            package.json \
+            README.md \
+            CHANGELOG.md \
+            LICENSE \
+            Documentation~ \
+            Editor \
+            Runtime \
+            Samples~
+
+      - name: Upload Release Asset
+        uses: softprops/action-gh-release@de2c0eb89ae2a093876385947365aca7b0e5f844
+        with:
+          files: ${{ env.zipFile }}
+          tag_name: ${{ github.event.release.tag_name }}

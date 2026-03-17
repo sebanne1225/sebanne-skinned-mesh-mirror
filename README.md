@@ -48,3 +48,7 @@ Package Manager 上の displayName は `Skinned Mesh Mirror` です。
 ## ライセンス
 
 MIT License です。詳細は `LICENSE` を参照してください。
+
+## Release
+
+GitHub Release を publish すると、version 付きの package zip が release assets に自動添付される前提です。
