@@ -52,3 +52,4 @@ MIT License です。詳細は `LICENSE` を参照してください。
 ## Release
 
 GitHub Release を publish すると、version 付きの package zip が release assets に自動添付される前提です。
+GitHub Actions の `workflow_dispatch` から手動実行した場合は、まず zip 作成結果を workflow artifact として確認できます。
