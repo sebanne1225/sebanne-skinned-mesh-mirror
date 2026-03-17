@@ -1,5 +1,7 @@
 # TOOL_INFO
 
+このファイルは内部向けの整理メモです。公開向けの説明は `README.md` を優先します。
+
 ## ツール名
 
 - Skinned Mesh Mirror
@@ -23,7 +25,7 @@
 
 ## 現在の状態
 
-- package 版だけで main window、Dry Run、本生成の確認が通っている。
+- package 版だけで、VPM 導入、main window、Dry Run、本生成の確認が通っている。
 - Check Window は package 確認用と、本体 Window への導線として残している。
 
 ## 非対応
@@ -37,5 +39,4 @@
 
 - Diagnostics / Utility の分離整理
 - Runtime を本当に空のままでよいかの見直し
-- README や公開向け導線の仕上げ
 - BlendShape 補正方針の検討

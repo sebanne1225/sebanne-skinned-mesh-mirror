@@ -3,7 +3,7 @@
   "displayName": "Skinned Mesh Mirror",
   "version": "0.1.2",
   "unity": "2022.3",
-  "description": "VRChat向けの衣装・小物用 Skinned Mesh ミラー生成ツールです。",
+  "description": "VRChat向けの衣装・小物用片側 Skinned Mesh から反対側メッシュを生成するツールです。",
   "author": {
     "name": "sebanne"
   }
