@@ -1,0 +1,31 @@
+Skinned Mesh Mirror - VCC / VPM 導入手順
+========================================
+
+このツールは VCC / VPM から導入してください。
+この zip だけでは Unity に導入できません。
+
+導入手順
+--------
+1. VRChat Creator Companion (VCC) を開きます
+2. `Settings` を開きます
+3. `Packages` から `Add Repository` を選びます
+4. 次の URL を追加します
+
+https://sebanne1225.github.io/sebanne-listing/index.json
+
+5. 対象の Unity project を開きます
+6. package 一覧から `Skinned Mesh Mirror` を探して追加します
+7. Unity を開き、次のメニューが出ていることを確認します
+
+Tools/Sebanne/Skinned Mesh Mirror/Window
+
+うまくいかない時
+----------------
+- Repository URL の貼り間違いがないか確認してください
+- VCC 側で package 一覧の更新が必要な場合があります
+- 導入後に Unity を開き直すと反映されることがあります
+
+注意
+----
+- 手動 import 前提の配布物ではありません
+- package 本体は VCC / VPM から取得してください

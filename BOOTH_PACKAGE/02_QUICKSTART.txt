@@ -1,0 +1,27 @@
+Skinned Mesh Mirror - はじめて使う時の流れ
+===========================================
+
+事前に確認すること
+------------------
+- VCC / VPM で `Skinned Mesh Mirror` を導入済み
+- ミラー元にしたい片側の Skinned Mesh がある
+- 対象部位やミラールートを確認できる
+
+最短の使い方
+------------
+1. Unity メニューの `Tools/Sebanne/Skinned Mesh Mirror/Window` を開きます
+2. 対象メッシュ、ミラールート、対象部位、source side を設定します
+3. まず `確認だけ` を有効にしたまま Dry Run を実行します
+4. 診断結果を確認します
+5. 問題がなければ本生成を実行します
+
+大事なポイント
+--------------
+- まず Dry Run で確認してから本生成してください
+- 問題が出た時は診断結果と Unity Console のログを確認してください
+- 現在の対応範囲は Leg / Foot 中心です
+
+補足
+----
+- `Tools/Sebanne/Skinned Mesh Mirror/Check Window` は package 確認用の補助画面です
+- 詳しい説明は repo の `README.md` を参照してください
