@@ -5,6 +5,9 @@ Skinned Mesh Mirror
 
 この zip の中に Unity package 本体は入っていません。
 導入は VCC / VPM から行ってください。
+repo 内では BOOTH_PACKAGE/ を作業用の固定名として使っています。
+BOOTH に貼る最終フォルダ名 / zip 名は別名推奨です。
+この repo の package.json.version (0.1.2) を使った推奨最終名は SkinnedMeshMirror_Booth_Package_v0.1.2 です。
 
 最初に読む順番
 --------------
