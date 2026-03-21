@@ -2,6 +2,14 @@
 
 このファイルは `Sebanne Skinned Mesh Mirror` の変更履歴を管理します。
 
+## [0.1.3] - 2026-03-21
+
+### Changed
+
+- README の VCC / VPM 導入手順を `source.json` ベースの案内に整理
+- BOOTH 同梱テキストの案内文を公開向けに調整
+- release 用の周辺文言を現在の導線に合わせて更新
+
 ## [0.1.0] - 2026-03-14
 
 ### Changed

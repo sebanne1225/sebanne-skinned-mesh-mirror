@@ -17,6 +17,6 @@
 
 ## 導入先
 
-- VPM listing: `https://sebanne1225.github.io/sebanne-listing/index.json`
+- VPM source: `https://sebanne1225.github.io/sebanne-listing/source.json`
 - displayName: `Skinned Mesh Mirror`
 - package name: `com.sebanne.skinned-mesh-mirror`

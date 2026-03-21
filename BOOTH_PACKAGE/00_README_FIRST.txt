@@ -1,6 +1,6 @@
 Skinned Mesh Mirror
 BOOTH 配布パッケージ案内
-version: 0.1.2
+version: 0.1.3
 
 このツールは、片側の source side をもとに、
 反対側の片側 Skinned Mesh を生成する Unity Editor ツールです。

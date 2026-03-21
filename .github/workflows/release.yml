@@ -30,7 +30,7 @@ jobs:
       - name: Validate Tag Version
         if: github.event_name == 'release'
         run: |
-          if [ "${{ github.event.release.tag_name }}" != "${{ steps.version.outputs.value }}" ]; then
+          if [ "${{ github.event.release.tag_name }}" != "${{ steps.version.outputs.value }}" ] && [ "${{ github.event.release.tag_name }}" != "v${{ steps.version.outputs.value }}" ]; then
             echo "Release tag and package.json version do not match."
             echo "tag=${{ github.event.release.tag_name }}"
             echo "version=${{ steps.version.outputs.value }}"
