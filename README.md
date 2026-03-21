@@ -20,13 +20,13 @@
 - BlendShape は補正未対応で、そのまま保持する前提です
 - Runtime は現時点では実質未使用で、Editor 主体の構成です
 
-## 導入方法
+## VCC / VPM での導入
 
-1. VCC の `Settings > Packages > Add Repository` から Sebanne の VPM listing を追加します。
-2. listing URL に `https://sebanne1225.github.io/sebanne-listing/index.json` を指定します。
-3. package 一覧から `Skinned Mesh Mirror` を導入します。
+1. VPM source として `https://sebanne1225.github.io/sebanne-listing/source.json` を追加します。
+2. package 一覧から `Skinned Mesh Mirror` (`com.sebanne.skinned-mesh-mirror`) を導入します。
+3. Unity を開き、package が導入されていることを確認します。
 
-GitHub Release には version 付きの package zip も添付される前提です。手動導入したい場合は、release assets から zip を利用できます。
+listing repo: `https://github.com/sebanne1225/sebanne-listing`
 
 ## 使い方
 

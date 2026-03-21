@@ -1,38 +1,29 @@
 Skinned Mesh Mirror
-===================
+BOOTH 配布パッケージ案内
+version: 0.1.2
 
-この zip は、Skinned Mesh Mirror の BOOTH 配布用案内ファイルです。
+このツールは、片側の source side をもとに、
+反対側の片側 Skinned Mesh を生成する Unity Editor ツールです。
 
-この zip の中に Unity package 本体は入っていません。
-導入は VCC / VPM から行ってください。
-repo 内では BOOTH_PACKAGE/ を作業用の固定名として使っています。
-BOOTH に貼る最終フォルダ名 / zip 名は別名推奨です。
-この repo の package.json.version (0.1.2) を使った推奨最終名は SkinnedMeshMirror_Booth_Package_v0.1.2 です。
+主な方針:
+- まず Dry Run で結果を確認します
+- 問題がなければ本生成へ進みます
+- package 本体の導入は VCC / VPM が基本です
 
-最初に読む順番
---------------
-1. この `00_README_FIRST.txt`
-2. `01_VCC_INSTALL.txt`
-3. `02_QUICKSTART.txt`
+最初にやること:
+1. repo の README を確認してください
+2. まずは VCC / VPM で導入してください
+3. 導入後は Dry Run を試してください
 
-ツール概要
-----------
-Skinned Mesh Mirror は、
-片側の source side をもとに反対側の片側 Skinned Mesh を生成する
-Unity Editor ツールです。
+導入の基本:
+- 主導線は VCC / VPM です
+- Git URL 導入は補助扱いです
 
-導入先
-------
-- VPM Repository URL
-  https://sebanne1225.github.io/sebanne-listing/index.json
+GitHub repo:
+https://github.com/sebanne1225/sebanne-skinned-mesh-mirror
 
-主なポイント
-------------
-- package 本体の導入は VCC / VPM 前提です
-- 手動 import 用の unitypackage はこの zip に入っていません
-- まず Dry Run で結果を確認してから本生成してください
-- Unity メニューは `Tools/Sebanne/Skinned Mesh Mirror/Window` です
+VPM source.json:
+https://sebanne1225.github.io/sebanne-listing/source.json
 
-補足
-----
-- ライセンスは `LICENSE` を参照してください
+このフォルダには、BOOTH から購入した方向けの最小案内だけを入れています。
+詳しい仕様や制限事項は README を参照してください。
