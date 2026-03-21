@@ -22,11 +22,11 @@
 
 ## VCC / VPM での導入
 
-1. VPM source として `https://sebanne1225.github.io/sebanne-listing/source.json` を追加します。
+1. VCC に追加する URL として `https://sebanne1225.github.io/sebanne-listing/index.json` を追加します。
 2. package 一覧から `Skinned Mesh Mirror` (`com.sebanne.skinned-mesh-mirror`) を導入します。
 3. Unity を開き、package が導入されていることを確認します。
 
-listing repo: `https://github.com/sebanne1225/sebanne-listing`
+参考ページ (`VCC` 追加先ではありません): `https://sebanne1225.github.io/sebanne-listing/`
 
 ## 使い方
 
