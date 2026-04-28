@@ -1,6 +1,6 @@
 # AGENTS.md
 
-この repo は VRChat 向け Unity Editor ツールのテンプレートです。作業時は以下を守ってください。
+この repo は `Sebanne Skinned Mesh Mirror` の Unity package です。作業時は以下を守ってください。
 
 ## 開発ルール
 
