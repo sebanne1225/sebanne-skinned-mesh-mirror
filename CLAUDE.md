@@ -43,7 +43,6 @@
 - まずは Editor 主体、Runtime は必要になるまで増やさない
 - public claim を広げる前に Unity で実機確認する
 - まず短い plan を出してから作業
-- まだ commit / push はしない
 
 ## Key Files
 
