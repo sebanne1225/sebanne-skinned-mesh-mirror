@@ -2,17 +2,14 @@
 
 このファイルは内部向けの整理メモです。公開向けの説明は `README.md` を優先します。
 
-## ツール名
+## 基本情報
 
-- Skinned Mesh Mirror
-
-## package名
-
-- `com.sebanne.skinned-mesh-mirror`
-
-## 表示名
-
-- `Skinned Mesh Mirror`
+- ツール名: `Skinned Mesh Mirror`
+- package名: `com.sebanne.skinned-mesh-mirror`
+- 表示名: `Skinned Mesh Mirror`
+- Runtime asmdef: `Sebanne.SkinnedMeshMirror`
+- Editor asmdef: `Sebanne.SkinnedMeshMirror.Editor`
+- 現在 version: `0.1.3`
 
 ## 想定用途
 
