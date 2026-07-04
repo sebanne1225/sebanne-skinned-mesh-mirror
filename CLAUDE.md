@@ -10,7 +10,7 @@
 ## Current State
 
 - 既存 Assets 実装の package への受け替えは済んでいます。repo root が package source of truth です。
-- `package.json` は `0.1.3` です。tag は `0.1.3` まであります。
+- version / tag は Resume Notes の tag 履歴を参照してください。
 - main UI は `Editor/UI/SkinnedMeshMirrorWindow.cs` にあり、menu は `Tools/Sebanne/Skinned Mesh Mirror/Window` です。`Editor/SkinnedMeshMirrorCheckWindow.cs` は package 読み込み確認用の補助ウィンドウとして残っています。
 - Window から Dry Run と本生成の両方が行えます。出力先、suffix、verbose log、diagnostics panel 高さまで保持しながら使う構成です。
 - `Editor/Core/SkinnedMeshMirrorBuilder.cs` で compatibility analysis、source side 判定、bone mapping、vertex 抽出、mesh 生成、asset 保存、sibling component コピーまで担当しています。
@@ -57,8 +57,7 @@
 ## Resume Notes
 
 - package: `com.sebanne.skinned-mesh-mirror`
-- version: `0.1.3`
-- latest tag: `0.1.3`
-- release asset 名: `com.sebanne.skinned-mesh-mirror-0.1.3.zip`
+- tag 履歴（追記 only）: `v0.1.0` (2026-03-14・初期の v-prefix 形式) → `0.1.0` (2026-03-17) → `0.1.1` (2026-03-17) → `0.1.2` (2026-03-17) → `0.1.3` (2026-03-21)
+- release asset 名の形式: `com.sebanne.skinned-mesh-mirror-{version}.zip`（version は最新 tag = `package.json` と一致。release workflow が検証）
 - menu: `Tools/Sebanne/Skinned Mesh Mirror/Window`
 - 既定出力先: `Assets/Sebanne/SkinnedMeshMirror/Generated`
