@@ -4,6 +4,10 @@
   "version": "0.1.3",
   "unity": "2022.3",
   "description": "VRChat向けの衣装・小物用片側 Skinned Mesh から反対側メッシュを生成するツールです。",
+  "documentationUrl": "https://github.com/sebanne1225/sebanne-skinned-mesh-mirror/blob/master/README.md",
+  "changelogUrl": "https://github.com/sebanne1225/sebanne-skinned-mesh-mirror/blob/master/CHANGELOG.md",
+  "licensesUrl": "https://github.com/sebanne1225/sebanne-skinned-mesh-mirror/blob/master/LICENSE",
+  "url": "https://github.com/sebanne1225/sebanne-skinned-mesh-mirror",
   "author": {
     "name": "sebanne"
   }
