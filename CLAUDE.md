@@ -44,20 +44,6 @@
 - public claim を広げる前に Unity で実機確認する
 - まず短い plan を出してから作業
 
-## Key Files
-
-- `Editor/UI/SkinnedMeshMirrorWindow.cs`
-- `Editor/Core/SkinnedMeshMirrorBuilder.cs`
-- `Editor/Core/SkinnedMeshMirrorLocalMap.cs`
-- `Editor/Core/SkinnedMeshMirrorTypes.cs`
-- `Editor/SkinnedMeshMirrorCheckWindow.cs`
-- `README.md`
-- `.github/workflows/release.yml`
-
 ## Resume Notes
 
-- package: `com.sebanne.skinned-mesh-mirror`
 - tag 履歴（追記 only）: `v0.1.0` (2026-03-14・初期の v-prefix 形式) → `0.1.0` (2026-03-17) → `0.1.1` (2026-03-17) → `0.1.2` (2026-03-17) → `0.1.3` (2026-03-21)
-- release asset 名の形式: `com.sebanne.skinned-mesh-mirror-{version}.zip`（version は最新 tag = `package.json` と一致。release workflow が検証）
-- menu: `Tools/Sebanne/Skinned Mesh Mirror/Window`
-- 既定出力先: `Assets/Sebanne/SkinnedMeshMirror/Generated`
